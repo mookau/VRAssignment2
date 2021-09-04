@@ -107,7 +107,7 @@ Shader "UI/CustomAnimated"
                         {                            
                             //Default wave animation from shader tutorial
                             //OUT.vertex.y += 2 * (cos(OUT.worldPosition.x / 4 * 80 + _Time * -120) / 80); // Vertical wave. The exact values used are arbitrary; tinker with them to suit your needs.                            
-
+                            
                             //Wobble based on time
                             /*
                             
@@ -124,7 +124,6 @@ Shader "UI/CustomAnimated"
                             OUT.vertex.x += sin(_TrackedPosition.x) / 20;
 
                             */
-
 
                             //Random Colour based on depth of tracker, just for testing
                             /*
