@@ -83,7 +83,7 @@ public class TextAnimated : Text
         {
             trackedPos = new Vector4(trackedObject.transform.position.x, trackedObject.transform.position.y, trackedObject.transform.position.z, trackedObject.transform.rotation.w);
         }
-        this.material.SetVector("_TrackedPosition", trackedPos);
+        this.material.SetVector("_WorldPos", this.transform.position);
     }
 }
 

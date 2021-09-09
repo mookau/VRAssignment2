@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TextMat
-  m_Shader: {fileID: -6465566751694194690, guid: fa80721eb7ae764419d4b2ac8a78cfd8, type: 3}
+  m_Name: TextMatTest
+  m_Shader: {fileID: -6465566751694194690, guid: 0342f2a18d09f054fbb2a9dfc64a7cc4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -77,6 +77,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaClip: 0
+    - _AnimScale: 100
+    - _AnimSpeed: 1
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0

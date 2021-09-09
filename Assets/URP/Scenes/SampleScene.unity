@@ -212,7 +212,7 @@ RectTransform:
   m_GameObject: {fileID: 9204860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 84248677}
   m_Father: {fileID: 0}
@@ -251,7 +251,7 @@ RectTransform:
   m_GameObject: {fileID: 84248676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_Children: []
   m_Father: {fileID: 9204864}
   m_RootOrder: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146d8d725d8632747bafd9c09a0f2879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1657096739}
+  m_Material: {fileID: 1234920135}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -295,7 +295,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: animated not animated. Woooo! less woo...
-  baseMaterial: {fileID: 2100000, guid: 662655f61ec2f204a9cba5df995a6c49, type: 2}
+  baseMaterial: {fileID: 2100000, guid: e59d7815b5173af4a9f0eae599e339e7, type: 2}
 --- !u!222 &84248679
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -654,15 +654,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1657096739
+--- !u!21 &1234920135
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TextMat(Clone)
-  m_Shader: {fileID: -6465566751694194690, guid: fa80721eb7ae764419d4b2ac8a78cfd8, type: 3}
+  m_Name: TextMatRotate(Clone)
+  m_Shader: {fileID: -6465566751694194690, guid: 4ac0a0816371c914698272271f187ccb, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -673,10 +673,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_71f87c5069db4f1c98444d3652faba04:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -735,6 +731,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaClip: 0
+    - _AnimScale: 0.5
+    - _AnimSpeed: 1
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -764,5 +762,6 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RotatePos: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
