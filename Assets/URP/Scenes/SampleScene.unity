@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146d8d725d8632747bafd9c09a0f2879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1234920135}
+  m_Material: {fileID: 1379852271}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -294,7 +294,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: animated not animated. Woooo! less woo...
+  m_Text: Lorem ipsum dolor sit amet.
   baseMaterial: {fileID: 2100000, guid: e59d7815b5173af4a9f0eae599e339e7, type: 2}
 --- !u!222 &84248679
 CanvasRenderer:
@@ -654,7 +654,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1234920135
+--- !u!21 &1379852271
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -762,6 +762,9 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ObjWorldPos: {r: 0, g: 0, b: 0, a: 0}
     - _RotatePos: {r: 0, g: 0, b: 0, a: 0}
+    - _RotationAxis: {r: 0, g: 0, b: 1, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _WorldPos: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -27,11 +27,12 @@ public class TextAnimated : Text
             trackedPos = trackedObject.transform.position;
         }
         this.material = Material.Instantiate(this.baseMaterial);
-        this.SetText("`animated` not animated. `Woooo!` less woo...");
+        //this.SetText("`animated` not animated. `Woooo!` less woo...");
     }
 
+    
     public void SetText(string newText)
-    {
+    {        
         if (newText.Contains(delimiter))
         {
             string[] substrings = newText.Split(delimiter);
@@ -64,6 +65,8 @@ public class TextAnimated : Text
         }
     }
 
+    
+
     public void SetTrackedObject(GameObject obj)
     {
         trackedObject = obj;
@@ -73,8 +76,20 @@ public class TextAnimated : Text
     protected override void OnPopulateMesh(VertexHelper toFill)
     {
         base.OnPopulateMesh(toFill);
-        this.material.SetFloatArray("_AnimateVerts", this.animateVerts);
+        //this.material.SetFloatArray("_AnimateVerts", this.animateVerts);
+
+        
+        //Hack job to get float array into shader graph shader
+
+        Texture2D tex = new Texture2D(1, animateVerts.Length, TextureFormat.RGBAFloat, false);
+        for (int i = 0; i < animateVerts.Length; i++) {
+            Color c = new Color(animateVerts[i], animateVerts[i], animateVerts[i], animateVerts[i]);
+            tex.SetPixel(0, i, c);
+            }
+
+        this.material.SetTexture("_TexturedVerts", tex);
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -83,7 +98,7 @@ public class TextAnimated : Text
         {
             trackedPos = new Vector4(trackedObject.transform.position.x, trackedObject.transform.position.y, trackedObject.transform.position.z, trackedObject.transform.rotation.w);
         }
-        this.material.SetVector("_WorldPos", this.transform.position);
+        this.material.SetVector("_ObjWorldPos", this.transform.position);
     }
 }
 
