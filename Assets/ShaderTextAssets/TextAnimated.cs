@@ -9,9 +9,9 @@ using UnityEditor;
 public class TextAnimated : Text
 {
     // Start is called before the first frame update
-    private const char delimiter = '`';
-    public Material baseMaterial;
-    private float[] animateVerts = new float[16];
+    //private const char delimiter = '`';
+    //public Material baseMaterial;
+    //private float[] animateVerts = new float[16];
 
     private GameObject trackedObject;
     private Vector3 trackedPos;
@@ -26,11 +26,11 @@ public class TextAnimated : Text
         {
             trackedPos = trackedObject.transform.position;
         }
-        this.material = Material.Instantiate(this.baseMaterial);
+        //this.material = Material.Instantiate(this.baseMaterial);
         //this.SetText("`animated` not animated. `Woooo!` less woo...");
     }
 
-    
+    /*
     public void SetText(string newText)
     {        
         if (newText.Contains(delimiter))
@@ -64,7 +64,7 @@ public class TextAnimated : Text
             this.text = newText;
         }
     }
-
+    */
     
 
     public void SetTrackedObject(GameObject obj)
@@ -76,7 +76,7 @@ public class TextAnimated : Text
     protected override void OnPopulateMesh(VertexHelper toFill)
     {
         base.OnPopulateMesh(toFill);
-        this.material.SetFloatArray("_AnimateVerts", this.animateVerts);
+        //this.material.SetFloatArray("_AnimateVerts", this.animateVerts);
 
         
         //Hack job to get float array into shader graph shader
@@ -91,7 +91,6 @@ public class TextAnimated : Text
         this.material.SetTexture("_TexturedVerts", tex);
         */
     }
-    
 
     // Update is called once per frame
     void Update()
@@ -101,10 +100,13 @@ public class TextAnimated : Text
             trackedPos = new Vector4(trackedObject.transform.position.x, trackedObject.transform.position.y, trackedObject.transform.position.z, trackedObject.transform.rotation.w);
         }
         this.material.SetVector("_ObjWorldPos", this.transform.position);
+        this.material.SetVector("_TrackedPos", this.trackedPos);
+
+        Debug.Log(trackedPos);
     }
 }
 
-
+/*
 [CustomEditor(typeof(TextAnimated))]
 public class TextAnimatedEditor : UnityEditor.UI.TextEditor
 {
@@ -124,3 +126,4 @@ public class TextAnimatedEditor : UnityEditor.UI.TextEditor
         serializedObject.ApplyModifiedProperties();
     }
 }
+*/
